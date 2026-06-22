@@ -68,7 +68,7 @@ section{position:relative}
 .logo-word{line-height:1}
 .logo-mark{width:1.15em;height:1.15em;margin:0 -.02em;transform:translateY(.08em)}
 .nav-links{display:flex;align-items:center;gap:1.6rem}
-.nav-links a{font-family:"Fredoka",sans-serif;font-weight:500;color:var(--ink);transition:color .15s}
+.nav-links a:not(.btn){font-family:"Fredoka",sans-serif;font-weight:500;color:var(--ink);transition:color .15s}
 .nav-links a:not(.btn):hover{color:var(--orange)}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
 .nav-toggle span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.25s}
