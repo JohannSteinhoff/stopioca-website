@@ -52,7 +52,7 @@ section{position:relative;scroll-margin-top:74px}
 /* ---- Highlights ---- */
 .hl-yellow{color:var(--yellow)}
 .outline{
-  color:transparent;-webkit-text-stroke:3px #fff;
+  color:transparent;-webkit-text-stroke:2px #fff;
 }
 
 /* ===== Nav ===== */

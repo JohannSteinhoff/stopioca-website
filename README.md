@@ -4,9 +4,11 @@ A single-page marketing site for **Stopioca**, a boba tea shop in San Marcos, TX
 designed to match the brand from their store flyers (orange/green/yellow, rounded
 display type, playful boba imagery).
 
+**🔗 Live site:** https://johannsteinhoff.github.io/stopioca-website/
+
 ## View it
-Just open `index.html` in any browser — no build step, no dependencies.
-Fonts load from Google Fonts; the map and images need an internet connection.
+Open the live link above, or just open `index.html` in any browser — no build step,
+no dependencies. Fonts load from Google Fonts; the map and images need an internet connection.
 
 ## Files
 - `index.html` — page markup
