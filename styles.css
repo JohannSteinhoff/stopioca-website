@@ -52,7 +52,7 @@ section{position:relative;scroll-margin-top:74px}
 /* ---- Highlights ---- */
 .hl-yellow{color:var(--yellow)}
 .outline{
-  color:transparent;-webkit-text-stroke:2px #fff;
+  color:#fff;
 }
 
 /* ===== Nav ===== */
@@ -140,7 +140,7 @@ section{position:relative;scroll-margin-top:74px}
   padding:.35em 1em;border-radius:999px;font-size:.95rem;margin-bottom:1rem;
 }
 .hero-title{font-size:clamp(3rem,9vw,6.2rem);color:#fff;text-shadow:0 6px 0 rgba(176,64,10,.25)}
-.hero-title .outline{font-size:1.08em;display:inline-block;text-shadow:none}
+.hero-title .outline{font-size:1.08em;display:inline-block}
 .hero-sub{color:#fff;font-size:clamp(1.05rem,2vw,1.3rem);max-width:30ch;margin:1.2rem 0 1.8rem;font-weight:600;opacity:.97}
 .hero-cta{display:flex;gap:.9rem;flex-wrap:wrap}
 .hero-cta .btn-primary{background:#fff;color:var(--orange-deep)}
