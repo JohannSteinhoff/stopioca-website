@@ -16,16 +16,10 @@
 <!-- ===== Header ===== -->
 <header class="nav" id="top">
   <a href="#top" class="logo" aria-label="Stopioca home">
-    <span class="logo-word">ST</span>
-    <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-      <circle cx="16" cy="16" r="15" fill="#F47C20"/>
-      <path d="M21 9c-6 0-9 3.5-9 8 0 3 2 5 5 5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
-      <circle cx="12" cy="22" r="2.4" fill="#fff"/>
-    </svg>
-    <span class="logo-word">PIOCA</span>
+    <img src="images/logo.png" alt="Stopioca" class="logo-img" />
   </a>
 
-  <nav class="nav-links" id="navLinks">
+  <nav class="nav-links" id="navLinks" aria-label="Main">
     <a href="#menu">Menu</a>
     <a href="#promo">Specials</a>
     <a href="#gallery">Gallery</a>
@@ -38,8 +32,18 @@
   </button>
 </header>
 
+<!-- ===== Scroll indicator (boba-pearl straw) ===== -->
+<nav class="scrollspy" id="scrollspy" aria-label="Page sections">
+  <span class="scrollspy-straw" aria-hidden="true"></span>
+  <a href="#top"     class="spy-dot" data-target="hero"    aria-label="Home"><span class="spy-label">Home</span></a>
+  <a href="#promo"   class="spy-dot" data-target="promo"   aria-label="Specials"><span class="spy-label">Specials</span></a>
+  <a href="#menu"    class="spy-dot" data-target="menu"    aria-label="Menu"><span class="spy-label">Menu</span></a>
+  <a href="#gallery" class="spy-dot" data-target="gallery" aria-label="Gallery"><span class="spy-label">Gallery</span></a>
+  <a href="#visit"   class="spy-dot" data-target="visit"   aria-label="Visit"><span class="spy-label">Visit</span></a>
+</nav>
+
 <!-- ===== Hero ===== -->
-<section class="hero">
+<section class="hero" id="hero">
   <div class="hero-blob hero-blob--1"></div>
   <div class="hero-blob hero-blob--2"></div>
   <div class="hero-inner">
@@ -209,13 +213,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <a href="#top" class="logo logo--footer" aria-label="Stopioca home">
-      <span class="logo-word">ST</span>
-      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <circle cx="16" cy="16" r="15" fill="#fff"/>
-        <path d="M21 9c-6 0-9 3.5-9 8 0 3 2 5 5 5" fill="none" stroke="#F47C20" stroke-width="3.4" stroke-linecap="round"/>
-        <circle cx="12" cy="22" r="2.4" fill="#F47C20"/>
-      </svg>
-      <span class="logo-word">PIOCA</span>
+      <img src="images/logo.png" alt="Stopioca" class="logo-img" />
     </a>
     <p class="footer-tag">Boba made happy, in the heart of San Marcos. 🧋</p>
     <div class="footer-social">

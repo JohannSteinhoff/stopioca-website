@@ -31,7 +31,7 @@ body{
 h1,h2,h3,h4,.logo{font-family:"Fredoka","Nunito",sans-serif;font-weight:700;line-height:1.05}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-section{position:relative}
+section{position:relative;scroll-margin-top:74px}
 
 /* ---- Buttons ---- */
 .btn{
@@ -64,14 +64,62 @@ section{position:relative}
   backdrop-filter:blur(10px);
   box-shadow:0 2px 16px rgba(70,40,10,.07);
 }
-.logo{display:inline-flex;align-items:center;font-size:1.6rem;letter-spacing:.5px;color:var(--ink)}
-.logo-word{line-height:1}
-.logo-mark{width:1.15em;height:1.15em;margin:0 -.02em;transform:translateY(.08em)}
+.logo{display:inline-flex;align-items:center;color:var(--ink)}
+.logo-img{height:42px;width:auto;display:block;border-radius:12px;box-shadow:var(--shadow-sm)}
 .nav-links{display:flex;align-items:center;gap:1.6rem}
 .nav-links a:not(.btn){font-family:"Fredoka",sans-serif;font-weight:500;color:var(--ink);transition:color .15s}
 .nav-links a:not(.btn):hover{color:var(--orange)}
-.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:11px 9px}
 .nav-toggle span{width:26px;height:3px;background:var(--ink);border-radius:3px;transition:.25s}
+
+/* ===== Scroll indicator: boba-pearl straw ===== */
+.scrollspy{
+  position:fixed;right:14px;top:50%;transform:translateY(-50%);
+  z-index:40;display:flex;flex-direction:column;align-items:center;gap:15px;
+  padding:16px 9px;
+  background:rgba(255,247,236,.72);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-radius:999px;
+  box-shadow:var(--shadow-sm),inset 0 0 0 1px rgba(244,124,32,.20);
+  transition:opacity .25s ease;
+}
+.scrollspy-straw{
+  position:absolute;top:18px;bottom:18px;left:50%;width:3px;
+  transform:translateX(-50%);
+  background:linear-gradient(var(--orange-lite),var(--orange));
+  opacity:.4;border-radius:3px;
+}
+.spy-dot{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  width:34px;height:34px;            /* touch target */
+}
+.spy-dot::before{                    /* the tapioca pearl */
+  content:"";width:12px;height:12px;border-radius:50%;
+  background:var(--ink-soft);
+  box-shadow:0 1px 2px rgba(0,0,0,.25);
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.spy-dot:hover::before,.spy-dot:focus-visible::before{transform:scale(1.3)}
+.spy-dot:focus-visible{outline:none}
+/* white + orange double ring reads on any section background (orange/green/cream) */
+.spy-dot:focus-visible::before{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--orange)}
+.spy-dot.active::before{
+  background:var(--orange);transform:scale(1.55);
+  box-shadow:0 0 0 4px rgba(244,124,32,.22);
+}
+.spy-label{
+  position:absolute;right:calc(100% + 10px);top:50%;
+  transform:translateY(-50%) translateX(6px);
+  background:var(--ink);color:#fff;
+  font-family:"Fredoka",sans-serif;font-weight:500;font-size:.8rem;
+  padding:.25em .75em;border-radius:999px;white-space:nowrap;
+  opacity:0;pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease;
+}
+.spy-dot:hover .spy-label,
+.spy-dot:focus-visible .spy-label,
+.spy-dot.active .spy-label{opacity:1;transform:translateY(-50%) translateX(0)}
 
 /* ===== Hero ===== */
 .hero{
@@ -204,10 +252,11 @@ section{position:relative}
 /* ===== Footer ===== */
 .footer{background:var(--ink);color:#fff;padding:3rem 1rem 2.2rem;text-align:center}
 .footer-inner{max-width:600px;margin:0 auto}
-.logo--footer{color:#fff;font-size:1.8rem;justify-content:center}
+.logo--footer{justify-content:center}
+.logo--footer .logo-img{height:48px}
 .footer-tag{margin:1rem 0 1.4rem;opacity:.85;font-weight:600}
 .footer-social{display:flex;gap:1.5rem;justify-content:center;margin-bottom:1.4rem}
-.footer-social a{font-family:"Fredoka",sans-serif;font-weight:500;color:var(--yellow);transition:opacity .15s}
+.footer-social a{font-family:"Fredoka",sans-serif;font-weight:500;color:var(--yellow);transition:opacity .15s;padding:.55rem .5rem}
 .footer-social a:hover{opacity:.7}
 .footer-copy{font-size:.85rem;opacity:.6}
 
@@ -244,7 +293,38 @@ section{position:relative}
   .gallery-grid .wide{grid-column:span 2}
   .gallery-grid .tall{grid-row:span 1}
 }
+/* Scroll rail on tablets/phones: flush to the screen edge as a half-pill so it
+   never sits over the content column. Tall hit areas keep dots easy to tap. */
+@media (max-width:860px){
+  .scrollspy{
+    right:0;gap:6px;padding:12px 8px 12px 10px;
+    border-radius:999px 0 0 999px;
+  }
+  .spy-dot{width:30px;height:40px}
+  .spy-dot::before{width:11px;height:11px}
+  /* hide the rail (and drop it from focus order) while the mobile menu is open */
+  body.nav-open .scrollspy{opacity:0;pointer-events:none;visibility:hidden}
+
+  /* keep light-background content clear of the edge rail */
+  .menu-grid,.gallery-grid{padding-right:46px}
+  .visit-inner{padding-right:38px}
+
+  /* map: shorter on phones so the visit info isn't pushed entirely off-screen */
+  .visit-map,.visit-map iframe{min-height:300px}
+}
+
 @media (max-width:420px){
   .badge-float{width:96px;height:96px;left:0}
   .badge-float strong{font-size:1.2rem}
+  .spy-dot{width:28px;height:38px}
+  .spy-label{font-size:.72rem;right:calc(100% + 8px)}
+  .logo-img{height:36px}
+  .menu-grid,.gallery-grid{padding-right:42px}
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important}
 }
