@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stopioca — Boba Tea in San Marcos, TX</title>
+<meta name="description" content="Stopioca is San Marcos' favorite boba tea spot. Signature milk teas, fruit teas, slushes & free tapioca every Saturday. 200 Springtown Way, San Marcos, TX." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23F47C20'/%3E%3Cpath d='M21 9c-6 0-9 3.5-9 8 0 3 2 5 5 5' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='22' r='2.4' fill='white'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="nav" id="top">
+  <a href="#top" class="logo" aria-label="Stopioca home">
+    <span class="logo-word">ST</span>
+    <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+      <circle cx="16" cy="16" r="15" fill="#F47C20"/>
+      <path d="M21 9c-6 0-9 3.5-9 8 0 3 2 5 5 5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/>
+      <circle cx="12" cy="22" r="2.4" fill="#fff"/>
+    </svg>
+    <span class="logo-word">PIOCA</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#menu">Menu</a>
+    <a href="#promo">Specials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+    <a href="tel:+15126679333" class="btn btn-pill btn-order">Order &middot; (512) 667-9333</a>
+  </nav>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-blob hero-blob--1"></div>
+  <div class="hero-blob hero-blob--2"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">🧋 San Marcos, Texas</span>
+      <h1 class="hero-title">
+        <span class="outline">BOBA</span><br />
+        made <span class="hl-yellow">happy.</span>
+      </h1>
+      <p class="hero-sub">
+        Hand-shaken milk teas, fresh fruit teas, and chewy tapioca pearls —
+        crafted fresh every day at Stopioca.
+      </p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-pill btn-primary">See the Menu</a>
+        <a href="#visit" class="btn btn-pill btn-ghost">Find Us</a>
+      </div>
+      <p class="hero-note">⭐️ The best boba in San Marcos &middot; Free WiFi &middot; Takeout</p>
+    </div>
+    <div class="hero-art">
+      <img src="images/stopioca_01.jpg" alt="Stopioca signature milk tea with tapioca pearls" />
+      <div class="badge-float">
+        <strong>FREE</strong>
+        <span>Tapioca<br />every&nbsp;Sat</span>
+      </div>
+    </div>
+  </div>
+  <div class="wave-divider" aria-hidden="true"></div>
+</section>
+
+<!-- ===== Promo strip ===== -->
+<section class="promo" id="promo">
+  <div class="promo-inner">
+    <div class="promo-text">
+      <span class="kicker">🎉 Weekend Special</span>
+      <h2><span class="hl-yellow">FREE TAPIOCA</span><br />every Saturday</h2>
+      <p>Stop by from <strong>1pm – 6pm</strong> every Saturday and get free tapioca pearls in your drink — on the house, until we run out!</p>
+      <a href="#visit" class="btn btn-pill btn-light">Get Directions</a>
+    </div>
+    <div class="promo-art">
+      <img src="images/stopioca_18.png" alt="Free tapioca every Saturday promotion" />
+    </div>
+  </div>
+</section>
+
+<!-- ===== Menu ===== -->
+<section class="menu" id="menu">
+  <div class="section-head">
+    <span class="kicker kicker--orange">🍵 Our Drinks</span>
+    <h2 class="section-title">The Menu</h2>
+    <p class="section-lead">Customize anything — pick your sweetness, ice level, and toppings. Dairy-free options available.</p>
+  </div>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Signature Milk Teas</h3>
+      <ul>
+        <li><span>Stopioca Milk Tea</span><b>$5.50</b></li>
+        <li><span>Brown Sugar Boba Milk</span><b>$6.25</b></li>
+        <li><span>Taro Milk Tea</span><b>$5.95</b></li>
+        <li><span>Honeydew Milk Tea</span><b>$5.95</b></li>
+        <li><span>Thai Milk Tea</span><b>$5.75</b></li>
+      </ul>
+    </div>
+
+    <div class="menu-card">
+      <h3>Fruit &amp; Green Teas</h3>
+      <ul>
+        <li><span>Mango Green Tea</span><b>$5.50</b></li>
+        <li><span>Forest Green Tea</span><b>$5.50</b></li>
+        <li><span>Passion Fruit Tea</span><b>$5.50</b></li>
+        <li><span>Strawberry Green Tea</span><b>$5.75</b></li>
+        <li><span>Rosy Sunset Soda</span><b>$5.95</b></li>
+      </ul>
+    </div>
+
+    <div class="menu-card">
+      <h3>Slushes &amp; Smoothies</h3>
+      <ul>
+        <li><span>Mango Slush</span><b>$5.95</b></li>
+        <li><span>Strawberry Slush</span><b>$5.95</b></li>
+        <li><span>Matcha Smoothie</span><b>$6.25</b></li>
+        <li><span>Taro Smoothie</span><b>$6.25</b></li>
+        <li><span>Coffee Frappe</span><b>$6.25</b></li>
+      </ul>
+    </div>
+
+    <div class="menu-card menu-card--toppings">
+      <h3>Toppings</h3>
+      <ul class="toppings-list">
+        <li>Tapioca Pearls</li>
+        <li>Popping Boba</li>
+        <li>Lychee Jelly</li>
+        <li>Pudding</li>
+        <li>Aloe Vera</li>
+        <li>Cheese Foam</li>
+      </ul>
+      <p class="topping-note">+$0.75 each</p>
+    </div>
+  </div>
+  <p class="menu-disclaimer">* Sample menu &amp; pricing for preview — final items and prices set by Stopioca.</p>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section class="gallery" id="gallery">
+  <div class="section-head">
+    <span class="kicker kicker--orange">📸 The Goods</span>
+    <h2 class="section-title">Fresh Daily</h2>
+  </div>
+  <div class="gallery-grid">
+    <figure><img src="images/stopioca_02.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_03.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure class="tall"><img src="images/stopioca_07.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_10.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_14.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure class="wide"><img src="images/stopioca_12.jpg" alt="Boba drinks on the counter" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_16.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_17.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_19.jpg" alt="Boba drink" loading="lazy" /></figure>
+    <figure><img src="images/stopioca_21.jpg" alt="Two boba drinks" loading="lazy" /></figure>
+  </div>
+</section>
+
+<!-- ===== Visit ===== -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div class="visit-info">
+      <span class="kicker kicker--orange">📍 Come Say Hi</span>
+      <h2 class="section-title">Visit Stopioca</h2>
+
+      <div class="info-row">
+        <h4>Address</h4>
+        <p>200 Springtown Way, Ste 114<br />San Marcos, TX 78666</p>
+      </div>
+
+      <div class="info-row">
+        <h4>Hours</h4>
+        <ul class="hours">
+          <li><span>Mon – Fri</span><b>10:00am – 9:00pm</b></li>
+          <li><span>Saturday</span><b>11:00am – 9:00pm</b></li>
+          <li><span>Sunday</span><b>12:00pm – 7:00pm</b></li>
+        </ul>
+      </div>
+
+      <div class="info-row">
+        <h4>Contact</h4>
+        <p><a href="tel:+15126679333">(512) 667-9333</a></p>
+      </div>
+
+      <div class="visit-cta">
+        <a href="https://www.google.com/maps/place/Stopioca/@29.8862525,-97.9222862,17z" target="_blank" rel="noopener" class="btn btn-pill btn-primary">Open in Maps</a>
+        <a href="https://www.instagram.com/stopioca/" target="_blank" rel="noopener" class="btn btn-pill btn-ghost">Follow on Instagram</a>
+      </div>
+    </div>
+
+    <div class="visit-map">
+      <iframe
+        title="Stopioca location map"
+        src="https://www.google.com/maps?q=200+Springtown+Way+Ste+114,+San+Marcos,+TX+78666&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo logo--footer" aria-label="Stopioca home">
+      <span class="logo-word">ST</span>
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="15" fill="#fff"/>
+        <path d="M21 9c-6 0-9 3.5-9 8 0 3 2 5 5 5" fill="none" stroke="#F47C20" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="12" cy="22" r="2.4" fill="#F47C20"/>
+      </svg>
+      <span class="logo-word">PIOCA</span>
+    </a>
+    <p class="footer-tag">Boba made happy, in the heart of San Marcos. 🧋</p>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/stopioca/" target="_blank" rel="noopener">Instagram</a>
+      <a href="tel:+15126679333">(512) 667-9333</a>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Stopioca · San Marcos, TX</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
